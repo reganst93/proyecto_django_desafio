@@ -11,4 +11,4 @@ def about(request):
 
 
 def welcome(request):
-    return render(request, "welcome.html, {}")
+    return render(request, "welcome.html", {})
