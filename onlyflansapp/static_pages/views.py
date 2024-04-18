@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from .models import Flan
 
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html", {})
+    flans = Flan.objects.filter(is_private=False)
+    return render(request, "index.html", {"flans": flans})
 
 
 def about(request):
@@ -11,4 +13,5 @@ def about(request):
 
 
 def welcome(request):
-    return render(request, "welcome.html", {})
+    flans = Flan.objects.filter(is_private=True)
+    return render(request, "welcome.html", {"flans": flans})
