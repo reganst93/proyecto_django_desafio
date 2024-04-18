@@ -1,0 +1,29 @@
+#nav {
+    background-color: #F2D399;
+    background-image: url("/static/img/flan4.png");
+    background-repeat: repeat-x;
+    background-position: center center; 
+    background-size: 13%;
+}
+
+
+
+#logo_nav {
+    width: 100px;
+}
+
+.navbar-nav .nav-link.text-light {
+    color: #8C3B3B !important;
+    margin-top: 15px;
+    font-size: 18px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+}
+
+#img_header {
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    height: 100vh; /* Altura del 100% de la ventana del navegador */
+    object-fit: cover; /* Escalar la imagen para que llene todo el espacio sin distorsionar */
+}
+
+
+
