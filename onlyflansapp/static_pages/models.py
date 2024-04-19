@@ -1,3 +1,4 @@
+from email import message
 from django.db import models
 import uuid
 
@@ -10,6 +11,13 @@ class Flan(models.Model):
     image = models.URLField()
     slug = models.SlugField(unique=True)
     is_private = models.BooleanField(default=False)
+
+
+class ContactForm(models.Model):
+    contact_form_uuid = models.UUIDField(default=uuid.uuid4, editable=False)
+    customer_email = models.EmailField()
+    customer_name = models.CharField(max_length=64)
+    messages = models.TextField()
 
 
 def _str_(self):

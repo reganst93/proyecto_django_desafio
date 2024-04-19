@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from static_pages.views import index, about, welcome
+from static_pages.views import index, about, welcome, contact
 
 
 urlpatterns = [
@@ -25,4 +25,5 @@ urlpatterns = [
     path("", index, name="indice"),
     path("about", about, name="acerca"),
     path("welcome", welcome, name="bienvenidos"),
+    path("contact", contact, name="contacto"),
 ]
