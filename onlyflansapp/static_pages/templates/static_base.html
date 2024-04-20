@@ -29,6 +29,12 @@
                 <li class="nav-item">
                     <a class="nav-link text-light" href="about">Sobre nosotros</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="accounts/login/">Iniciar sesion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="accounts/logout/">Cerrar sesion</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -91,6 +97,10 @@
 {% endblock pages %}
 {% block content %}
 {% endblock content %}
+{% block login %}
+{% endblock login %}
+{% block logout %}
+{% endblock logout %}
 {% block footer %}
 <footer class="container">
     <p class="float-end"><a href="#">Back to top</a></p>

@@ -16,9 +16,8 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from static_pages.views import index, about, welcome, contact
-
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -26,4 +25,7 @@ urlpatterns = [
     path("about", about, name="acerca"),
     path("welcome", welcome, name="bienvenidos"),
     path("contact", contact, name="contacto"),
+    path(
+        "accounts/", include("django.contrib.auth.urls")
+    ),  # Habilita las URL de autenticación
 ]
