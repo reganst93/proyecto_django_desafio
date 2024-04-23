@@ -1,0 +1,53 @@
+#nav {
+    background-color: #3C1518;
+    padding: 5px 5px; /* Ajusta el relleno del navbar */
+
+}
+
+#logo_nav {
+    width: 150px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.navbar-nav .nav-link.text-light {
+    color: #8C3B3B !important;
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+#img_header {
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    height: 100vh; /* Altura del 100% de la ventana del navegador */
+    object-fit: cover; /* Escalar la imagen para que llene todo el espacio sin distorsionar */
+}
+
+
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+.bg-body-secondary-m {
+    background-color:  #A44200;
+}
+#tituloflan{
+    color: #F2F3AE;
+    font-weight: bold;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+#footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #69140E;
+    padding: 20px;
+    box-sizing: border-box; 
+    
+}
