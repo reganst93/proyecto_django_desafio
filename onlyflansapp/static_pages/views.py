@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.contrib import messages
+from django.shortcuts import redirect, render
 from django.http import HttpResponseRedirect
 from .models import Flan, ContactForm
 from static_pages.forms import ContactFormForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
 
 
 # Vista para la página de inicio
@@ -22,6 +25,7 @@ def about(request):
 
 
 # Vista para la página de bienvenida
+@login_required
 def welcome(request):
     """
     Renderiza la página de bienvenida con una lista de flanes privados.
@@ -48,3 +52,16 @@ def contact(request):
         form = ContactFormForm()
 
     return render(request, "contact.html", {"form": form})
+
+
+def register(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Usuario registrado exitosamente.")
+            # Redirige a donde desees después del registro exitoso
+            return redirect("indice")  # Por ejemplo, redirige a la página de inicio
+    else:
+        form = UserCreationForm()
+    return render(request, "registration/register.html", {"form": form})

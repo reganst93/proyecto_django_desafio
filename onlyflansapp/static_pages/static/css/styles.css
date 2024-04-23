@@ -1,22 +1,19 @@
 #nav {
-    background-color: #F2D399;
-    background-image: url("/static/img/flan4.png");
-    background-repeat: repeat-x;
-    background-position: center center; 
-    background-size: 13%;
+    background-color: #3C1518;
+    padding: 5px 5px; /* Ajusta el relleno del navbar */
+
 }
 
-
-
 #logo_nav {
-    width: 100px;
+    width: 150px; 
+    height: auto; 
+    margin-right: 10px; 
 }
 
 .navbar-nav .nav-link.text-light {
     color: #8C3B3B !important;
-    margin-top: 15px;
-    font-size: 18px; /* Tamaño de fuente más grande */
-    font-weight: bold; /* Texto en negrita */
+    font-size: 18px; 
+    font-weight: bold; 
 }
 
 #img_header {
@@ -31,10 +28,26 @@
     font-size: 27px;
     padding: 10px;
 }
+.bg-body-secondary-m {
+    background-color:  #A44200;
+}
+#tituloflan{
+    color: #F2F3AE;
+    font-weight: bold;
+}
 
 .bigicon {
     font-size: 35px;
     color: #36A0FF;
 }
 
-
+#footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #69140E;
+    padding: 20px;
+    box-sizing: border-box; 
+    
+}

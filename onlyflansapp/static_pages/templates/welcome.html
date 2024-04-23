@@ -1,4 +1,8 @@
 {% extends 'static_base.html' %}
+{% load static %}
+{% block css_pages %}
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+{% endblock %}
 {% block pages %}
     <div class="container">
         <div class="row">
