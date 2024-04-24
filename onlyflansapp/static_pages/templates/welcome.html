@@ -1,0 +1,26 @@
+{% extends 'static_base.html' %}
+{% load static %}
+{% block css_pages %}
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+{% endblock %}
+
+{% block pages %}
+    <div class="container">
+        <div class="row">
+            <h1>Indice</h1>
+        </div>
+        <div class="row">
+            {%for flan in flans%}
+            <div class="col col-sm-6 col-md-3">
+                <div class="card">
+                    <img src="{{flan.image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{flan.name}}</h5>
+                      <p class="card-text">{{flan.description}}</p>
+                    </div>
+                  </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+{% endblock pages %}
