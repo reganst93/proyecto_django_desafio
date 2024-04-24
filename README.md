@@ -1,6 +1,6 @@
 # Proyecto OnlyFlans
 
-Un sitio web para la PYME OnlyFlans, dedicada a la venta de pasteles y postres.
+Un sitio web para la PYME OnlyFlans, dedicada a presentacion de flanes.
 
 ## Descripción
 
@@ -30,7 +30,17 @@ Sistema Operativo: Ubuntu 20.04, Windows 10 u otro compatible.
 Lenguaje de programación: Python 3.x
 Framework: Django 4.2.11
 Base de datos: Opcional, dependiendo de la configuración del proyecto.
-Otros requisitos específicos del proyecto: asgiref==3.8.1, sqlparse==0.4.4, typing_extensions==4.11.0
+Otros requisitos específicos del proyecto: 
+  - asgiref==3.8.1: Biblioteca para comunicaciones asincrónicas en Python.
+  - beautifulsoup4==4.12.3: Herramienta de scraping para extraer datos de HTML y XML.
+  - crispy-bootstrap4==2024.1: Integración de formularios de Django con Bootstrap 4.
+  - Django==4.2.11: Framework de desarrollo web en Python.
+  - django-bootstrap4==24.3: Integración de Bootstrap 4 con aplicaciones web Django.
+  - django-crispy-forms==2.1: Control de la apariencia de formularios en Django.
+  - soupsieve==2.5: Utilizado por BeautifulSoup para análisis de selectores CSS.
+  - sqlparse==0.4.4: Análisis y formateo de consultas SQL en Python.
+  - typing_extensions==4.11.0: Extensiones para el sistema de anotaciones de tipos en Python.
+
 Nota: Este archivo se actualizará conforme avance el proyecto, incluyendo nuevos requisitos y modificaciones necesarias para su funcionamiento. Es recomendable revisar periódicamente esta sección para estar al tanto de los cambios.
 
 ### Instalación 🔧
