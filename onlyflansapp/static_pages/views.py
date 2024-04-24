@@ -31,7 +31,8 @@ def welcome(request):
     Renderiza la página de bienvenida con una lista de flanes privados.
     """
     flans = Flan.objects.filter(is_private=True)
-    return render(request, "welcome.html", {"flans": flans})
+    vista = "welcome"
+    return render(request, "welcome.html", {"flans": flans, "vista": vista})
 
 
 # Vista para el formulario de contacto
@@ -59,9 +60,11 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Usuario registrado exitosamente.")
-            # Redirige a donde desees después del registro exitoso
-            return redirect("indice")  # Por ejemplo, redirige a la página de inicio
+            messages.success(
+                request,
+                "¡Registro exitoso! ¡Bienvenido al delicioso mundo del flan en OnlyFlans! 🍮",
+            )
+            return redirect("indice")
     else:
         form = UserCreationForm()
     return render(request, "registration/register.html", {"form": form})

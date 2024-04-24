@@ -3,41 +3,6 @@
 {% block css_pages %}
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
-<!--% block content %}
-
-  {% if form.errors %}
-    <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
-  {% endif %}
-
-  {% if next %}
-    {% if user.is_authenticated %}
-      <p>Su cuenta no tiene acceso a esta página. Para continuar,
-      inicie sesión con una cuenta que tenga acceso.</p>
-    {% else %}
-      <p>Por favor inicie sesión para ver esta página.</p>
-    {% endif %}
-  {% endif %}
-
-  <form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    <table>
-      <tr>
-        <td>{{ form.username.label_tag }}</td>
-        <td>{{ form.username }}</td>
-      </tr>
-      <tr>
-        <td>{{ form.password.label_tag }}</td>
-        <td>{{ form.password }}</td>
-      </tr>
-    </table>
-    <input type="submit" value="login">
-    <input type="hidden" name="next" value="{{ next }}">
-  </form>
-
-  {# Asume que configura la vista de restablecimiento de contraseña en su URLconf #}
-  <p><a href="{% url 'password_reset' %}">¿Olvidó su contraseña?</a></p>
-
--->
 {% block content %}
 <section class="vh-100">
   <div class="container-fluid">
@@ -46,7 +11,7 @@
 
         <div class="px-5 ms-xl-4">
           <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
-          <span class="h1 fw-bold mb-0">Logo</span>
+          <span class="h1 fw-bold mb-0">OnlyFlans</span>
         </div>
 
         <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
@@ -54,7 +19,8 @@
           <form method="post" action="{% url 'login' %}" style="width: 23rem;">
             {% csrf_token %}
 
-            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">
+              ¡Descubre el delicioso mundo del flan! 🍮</h3>
 
             {% if form.errors %}
               <p>Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
@@ -62,20 +28,19 @@
 
             <div data-mdb-input-init class="form-outline mb-4">
               {{ form.username }}
-              <label class="form-label" for="form2Example18">Email address</label>
+              <label class="form-label" for="form2Example18">Correo Electronico</label>
             </div>
 
             <div data-mdb-input-init class="form-outline mb-4">
               {{ form.password }}
-              <label class="form-label" for="form2Example28">Password</label>
+              <label class="form-label" for="form2Example28">Contraseña</label>
             </div>
 
             <div class="pt-1 mb-4">
-              <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="submit">Login</button>
-            </div>
-
-            <p class="small mb-5 pb-lg-2"><a class="text-muted" href="{% url 'password_reset' %}">Forgot password?</a></p>
-            <p>Don't have an account? <a href="{% url 'registro' %}" class="link-info">Registrate Aqui</a></p>
+              <button data-mdb-button-init data-mdb-ripple-init class="btn btn-lg btn-block" type="submit" style="background-color:#69140E; border-color: #69140E; color: white;">Entrar</button>
+          </div>
+            <p class="small mb-5 pb-lg-2"><a class="text-muted" href="{% url 'password_reset' %}">Olvidaste tu contraseña?</a></p>
+            <p id="pregunta">No tienes cuenta? <a href="{% url 'registro' %}" class="link-info">Registrate Aqui</a></p>
 
           </form>
 
@@ -83,7 +48,7 @@
 
       </div>
       <div class="col-sm-6 px-0 d-none d-sm-block">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+        <img src="{% static 'img/flanlongin.jpg' %}"
           alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
       </div>
     </div>

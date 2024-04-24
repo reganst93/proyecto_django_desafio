@@ -2,23 +2,21 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <br>
-    <br>
-    <br>
     <div class="row">
         <div class="col-12 col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-body">
                     <h2>Registro de usuario</h2>
                     <hr>
-                    <form action="" method="post">
+                    <form method="post">
                         {% csrf_token %}
-                        {% crispy form %}  <!-- Renderiza el formulario utilizando django-crispy-forms -->
-                        <a href="{% url 'login'%}">Ir a inicio</a>  <!-- Ajusta el href según tu configuración -->
-                        <a href="#">Enlace Vacío</a> <!-- Agrega un href adecuado o elimina este enlace -->
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
+    {% endblock %}
+
+
