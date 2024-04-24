@@ -1,4 +1,56 @@
 {% extends 'static_base.html' %}
+{% load static %}
+{% block css_pages %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
 {% block pages %}
-<div>about</div>
+<section class="dark">
+	<div class="container py-4">
+		<h1 class="h1 text-center" id="pageHeaderTitle">OnlyFlans: Una Historia de Determinación y Gatos de Meme</h1>
+
+		<article class="postcard dark blue">
+			<img class="postcard__img" src="{% static 'img/gato1.jpg' %}" alt="Image Title" />
+			<div class="postcard__text">
+				<h1 class="postcard__title blue">La Idea Brillante</h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Abril 2024
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+                    <li>Concepción de la Idea: Nace la visión de OnlyFlans como un destino en línea para amantes del flan.</li>
+                    <li>Primeros Pasos: Enfrentamos obstáculos técnicos y creativos al empezar el proyecto.</li>
+                <li>Frustración Inicial: Los errores nos desaniman, pero la determinación persiste.</li>
+                
+			</div>
+		</article>
+		<article class="postcard dark red">
+			
+				<img class="postcard__img" src="{% static 'img/gato 2.jpg' %}" alt="Image Title" />	
+			<div class="postcard__text">
+				<h1 class="postcard__title red">La Victoria y el Éxito</h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i> Abril 2024
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+                    <li>
+                        Punto de Quiebre: Superamos los desafíos y fortalecemos nuestra determinación.
+                    </li>
+                    <li>
+                        Triunfo y Lanzamiento: OnlyFlans se lanza con éxito al mundo.
+                    </li>
+                    <li>
+                        Celebración y Crecimiento: Miramos hacia atrás con orgullo mientras OnlyFlans crece, con los gatos de meme como testigos de nuestra travesía.
+                    </li>
+                    </div>
+			</div>
+		</article>
+	</div>
+</section>
+
+
 {% endblock pages%}
